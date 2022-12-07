@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Házi feladat: alap algoritmusok, ciklusok, függvények
-    </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>Házi feladat: alap algoritmusok, ciklusok, függvények</title>
+  </head>
+  <body>
     <h2>Házi feladat: alap algoritmusok, ciklusok, függvények</h2>
     <b>
-        1. készíts egy programot ami az alábbi tömbben eldönti az összes elemről hogy osztható e kettővel vagy nem<br>
-        const nums = [3,4,9,6,2];<br>
-        a kettővel oszthatóság ellenőrzését maradékos osztással kell megnézni:<br>
-        8 % 2 === 0 // true mert a maradék nulla<br>
-        3 % 2 === 0 // false mert van maradék<br>
-        Az eredményt így írd ki a képernyőre:<br>
-        3: nem osztható<br>
-        4: osztható<br>
-        9: nem osztható<br>
-        6: osztható<br>
-        2: osztható<br>
+      1. készíts egy programot ami az alábbi tömbben eldönti az összes elemről
+      hogy osztható e kettővel vagy nem<br />
+      const nums = [3,4,9,6,2];<br />
+      a kettővel oszthatóság ellenőrzését maradékos osztással kell megnézni:<br />
+      8 % 2 === 0 // true mert a maradék nulla<br />
+      3 % 2 === 0 // false mert van maradék<br />
+      Az eredményt így írd ki a képernyőre:<br />
+      3: nem osztható<br />
+      4: osztható<br />
+      9: nem osztható<br />
+      6: osztható<br />
+      2: osztható<br />
     </b>
 
     <!-- ez a HTML adatkiíratáshoz kell -->
-    <p style="background-color:yellowgreen" id="data"></p>
+    <p style="background-color: yellowgreen" id="data"></p>
 
     <script>
-        const nums = [3, 4, 9, 6, 2];
+      const nums = [3, 4, 9, 6, 2];
 
-        let num = '';
-        let i = 0;
-        let len = nums.length;
+      let num = "";
+      let i = 0;
+      let len = nums.length;
 
-        // ez a ciklus végigmegy a tömb elemein, és megvizsgálja hogy az adott elem osztható e kettővel
-        for (; i < len; i++) {
-            if (nums[i] % 2 === 0) {
-            num += nums[i] + ": osztható" + "<br>";
-            console.log(nums[i] + ": osztható");
-            } else {
-                num += nums[i] + ": nem osztható" + "<br>";
-                console.log(nums[i] + ": nem osztható");
-            }
-        };
+      // ez a ciklus végigmegy a tömb elemein, és megvizsgálja hogy az adott elem osztható e kettővel
+      for (; i < len; i++) {
+        if (nums[i] % 2 === 0) {
+          num += nums[i] + ": osztható" + "<br>";
+          console.log(nums[i] + ": osztható");
+        } else {
+          num += nums[i] + ": nem osztható" + "<br>";
+          console.log(nums[i] + ": nem osztható");
+        }
+      }
 
-        document.getElementById("data").innerHTML = num;
+      document.getElementById("data").innerHTML = num;
     </script>
-</body>
+  </body>
 </html>
